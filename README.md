@@ -1,8 +1,8 @@
-##Mortgage Lender App
+## Mortgage Lender App
 Every day, potential buyers are looking for a lender to finance their new home.
 Let's build an app to simulate a potential (and grossly  over-simplified) process for lenders to qualify and approve loan applicants.
 
-####Background info:
+#### Background info:
 	- https://www.moneyunder30.com/how-your-credit-scores-affect-mortgage-rates 	- https://blog.mint.com/housing/how-lenders-determine-how-much-house-you-can-afford-1013/
 	- https://www.wikihow.com/Calculate-Mortgage-Payments
 
