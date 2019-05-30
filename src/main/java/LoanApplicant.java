@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 
 public class LoanApplicant {
     private BigDecimal downPayment;
+    private BigDecimal requestedAmount;
     private BigDecimal monthlyGrossIncome;
     private BigDecimal monthlyDebtLoad;
     private int creditScore;
@@ -19,6 +20,14 @@ public class LoanApplicant {
 
     public void setDownPayment(BigDecimal downPayment) {
         this.downPayment = downPayment;
+    }
+
+    public BigDecimal getRequestedAmount() {
+        return requestedAmount;
+    }
+
+    public void setRequestedAmount(BigDecimal requestedAmount) {
+        this.requestedAmount = requestedAmount;
     }
 
     public BigDecimal getMonthlyGrossIncome() {

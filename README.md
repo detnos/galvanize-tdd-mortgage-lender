@@ -42,6 +42,14 @@ As a lender, I want to be able to add funds so that I have money to offer loans 
 - then I should see my total available funds increase according to how much I added
 
 
+As a lender, I want to determine whether or not an applicant is a good candidate to offer a loan to so that I can qualify or deny them for a requested loan amount
+- Given that a loanApplicant has a good debt-to-income ratio (DTI < 36%), a credit score above 620, and an amountSaved >= 25% of the requested loanAmount,
+- When they apply for a loan
+- then I should qualify them
+- For the loanApplicant above, `lender.qualifyLoanApplication(loanApplicant, loanAmount: 250000 )` should return `true`
+- For the loanApplicant above, `lender.qualifyLoanApplication(loanApplicant, loanAmount: 1000000 )` should return `false`
+
+
 As a lender, I want to deny applicants who request higher loan amounts than I have available in my funds so that I don't go bankrupt
 - Given that an applicant requests a loan,
 - when the requested amount is greater than the amount of funds I have available
@@ -59,14 +67,6 @@ As a lender, I want to calculate a monthly mortgage payment so that I can assess
 - when I am requested of a loan for a given principal amount, monthly interest rate, and # of payments,
 - then I can calculate the minimum monthly mortgage payment for a LoanApplicant
 - `lender.calculateMonthlyMortgage(principal: 200000, annualRate: .04, numPayments: 360)` should return `1193.54`
-
-
-As a lender, I want to determine whether or not an applicant is a good candidate to offer a loan to so that I can qualify or deny them for a requested loan amount
-- Given that a loanApplicant has a good debt-to-income ratio (DTI < 36%), a credit score above 620, and an amountSaved >= 25% of the requested loanAmount,
-- When they apply for a loan
-- then I should qualify them
-- For the loanApplicant above, `lender.qualifyLoanApplication(loanApplicant, loanAmount: 250000 )` should return `true`
-- For the loanApplicant above, `lender.qualifyLoanApplication(loanApplicant, loanAmount: 1000000 )` should return `false`
 
 
 As a lender, I want to offer a loan contract to a qualified applicant if I have enough available funds so that they can choose to review and accept a loan from me
