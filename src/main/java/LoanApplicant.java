@@ -7,8 +7,9 @@ public class LoanApplicant {
     private BigDecimal monthlyDebtLoad;
     private int creditScore;
 
-    public LoanApplicant(BigDecimal downPayment, BigDecimal monthlyGrossIncome, BigDecimal monthlyDebtLoad, int creditScore) {
+    public LoanApplicant(BigDecimal downPayment, BigDecimal requestedAmount, BigDecimal monthlyGrossIncome, BigDecimal monthlyDebtLoad, int creditScore) {
             this.downPayment = downPayment;
+            this.requestedAmount = requestedAmount;
             this.monthlyGrossIncome = monthlyGrossIncome;
             this.monthlyDebtLoad = monthlyDebtLoad;
             this.creditScore = creditScore;
