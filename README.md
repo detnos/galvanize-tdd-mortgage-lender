@@ -18,7 +18,7 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
 
 1. This exercise is meant to be completed with pair programming.  Discuss when you will change driver/navigator roles.
 1. `fork` this repository.
-1. `clone` your fork of this repsitory.
+1. `clone` your fork of this repository.
 1. Import the `build.gradle` file into idea.
 1. Use the acceptance criteria for the first story to write a failing test.
 1. Write the **simplest** code needed to make the test pass. 
@@ -30,12 +30,6 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
 
 
 ### User Stories
-As a potential loan applicant, I want to fill out necessary background information so that I am eligible to apply for a loan
-- Given that I want to apply for a home loan,
-- when I provide the following information (amountSaved, monthlyGrossIncome, monthlyDebtLoad, creditScore),
-- then I should be eligible as a loanApplicant
-- `lender.checkApplicantEligibility(new LoanApplicant(amountSaved: 50000, monthlyGrossIncome: 5000, monthlyDebtLoad: [], creditScore: 760))` should return `true`
-
 
 As a lender, I want to be able to add funds so that I have money to offer loans to potential home buyers
 - Given that I am a lender with a means to store funds,
