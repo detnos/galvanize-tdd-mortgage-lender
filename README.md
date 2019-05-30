@@ -31,6 +31,11 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
 
 ### User Stories
 
+As a lender, I want to be able to check my funds so I know how much money I can offer as a loan
+- Given that I am a lender
+- when I check my available funds
+- then I should see how much funds I currently have
+
 As a lender, I want to be able to add funds so that I have money to offer loans to potential home buyers
 - Given that I am a lender with a means to store funds,
 - when I add funds to my account
