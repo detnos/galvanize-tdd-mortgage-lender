@@ -1,5 +1,5 @@
-public class Lender {
-    public Lender(){
+final class Lender {
+    Lender(){
         
     }
 }
