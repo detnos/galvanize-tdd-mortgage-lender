@@ -55,11 +55,7 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
 5. As a lender, I want to calculate a monthly mortgage payment so that I can assess whether or not an applicant is a good candidate to offer a loan to
     - Given that I have an equation to calculate monthly mortgage payments:
         ``` 			
-        M = P * (r * (1+r)^n) / ((1 + r)^n - 1)
-                M = monthly payment
-                P = Principal amount
-                r = monthly interest rate (annual interest rate  / 12)
-                n = number of payments (# of months you will be paying the loan
+        monthlyPayment = principal * ((interestRate/12) * (1+(interestRate/12))^numberOfPayments) / ((1 + (interestRate/12))^numberOfPayments - 1)
     - when I am requested of a loan for a given principal amount, monthly interest rate, and # of payments,
     - then I can calculate the minimum monthly mortgage payment for a LoanApplicant
     - Ex. calculating monthly mortgage for a principal amount of 200000, annualRate of .04, numPayments of 360 should return `1193.54`
