@@ -58,7 +58,7 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
         monthlyPayment = principal * ((interestRate/12) * (1+(interestRate/12))^numberOfPayments) / ((1 + (interestRate/12))^numberOfPayments - 1)
     - when I am requested of a loan for a given principal amount, monthly interest rate, and # of payments,
     - then I can calculate the minimum monthly mortgage payment for a LoanApplicant
-    - Ex. calculating monthly mortgage for a principal amount of 200000, annualRate of .04, numPayments of 360 should return `1193.54`
+    - Ex. calculating monthly mortgage for a principal amount of 250000, annualRate of .04, numPayments of 360 should return `1193.54`
 
 6. As a lender, I want to offer a loan contract to a qualified applicant if I have enough available funds so that they can choose to review and accept a loan from me
     - Given that I have enough available funds to offer a loan,
