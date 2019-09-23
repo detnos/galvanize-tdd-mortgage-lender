@@ -1,5 +1,3 @@
 final class Lender {
-    Lender(){
-        
-    }
+
 }

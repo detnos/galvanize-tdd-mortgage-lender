@@ -1,58 +1,35 @@
-import java.math.BigDecimal;
+final class LoanApplicant {
+	private final int  creditScore;
+	private final int  downPayment;
+	private final int  monthlyDebtLoad;
+	private final int  monthlyGrossIncome;
+	private final long requestedAmount;
 
-public class LoanApplicant {
-    private BigDecimal downPayment;
-    private BigDecimal requestedAmount;
-    private BigDecimal monthlyGrossIncome;
-    private BigDecimal monthlyDebtLoad;
-    private int creditScore;
+	LoanApplicant(final int downPayment, final long requestedAmount, final int monthlyGrossIncome, final int monthlyDebtLoad, final int creditScore) {
+		this.downPayment = downPayment;
+		this.requestedAmount = requestedAmount;
+		this.monthlyGrossIncome = monthlyGrossIncome;
+		this.monthlyDebtLoad = monthlyDebtLoad;
+		this.creditScore = creditScore;
+	}
 
-    public LoanApplicant(BigDecimal downPayment, BigDecimal requestedAmount, BigDecimal monthlyGrossIncome, BigDecimal monthlyDebtLoad, int creditScore) {
-            this.downPayment = downPayment;
-            this.requestedAmount = requestedAmount;
-            this.monthlyGrossIncome = monthlyGrossIncome;
-            this.monthlyDebtLoad = monthlyDebtLoad;
-            this.creditScore = creditScore;
-        }
+	int getCreditScore() {
+		return creditScore;
+	}
 
-    public BigDecimal getDownPayment() {
-        return downPayment;
-    }
+	int getDownPayment() {
+		return downPayment;
+	}
 
-    public void setDownPayment(BigDecimal downPayment) {
-        this.downPayment = downPayment;
-    }
+	int getMonthlyDebtLoad() {
+		return monthlyDebtLoad;
+	}
 
-    public BigDecimal getRequestedAmount() {
-        return requestedAmount;
-    }
+	int getMonthlyGrossIncome() {
+		return monthlyGrossIncome;
+	}
 
-    public void setRequestedAmount(BigDecimal requestedAmount) {
-        this.requestedAmount = requestedAmount;
-    }
-
-    public BigDecimal getMonthlyGrossIncome() {
-        return monthlyGrossIncome;
-    }
-
-    public void setMonthlyGrossIncome(BigDecimal monthlyGrossIncome) {
-        this.monthlyGrossIncome = monthlyGrossIncome;
-    }
-
-    public BigDecimal getMonthlyDebtLoad() {
-        return monthlyDebtLoad;
-    }
-
-    public void setMonthlyDebtLoad(BigDecimal monthlyDebtLoad) {
-        this.monthlyDebtLoad = monthlyDebtLoad;
-    }
-
-    public int getCreditScore() {
-        return creditScore;
-    }
-
-    public void setCreditScore(int creditScore) {
-        this.creditScore = creditScore;
-    }
-
+	long getRequestedAmount() {
+		return requestedAmount;
+	}
 }

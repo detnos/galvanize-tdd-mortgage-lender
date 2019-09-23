@@ -29,6 +29,13 @@ Let's build an app to simulate a potential (and grossly  over-simplified) proces
 8. Commit with an informative message
 9. Move on to the next user story and continue until all stories are completed.
 
+### Currency
+This project models all currency as pennies. So, a value of 100 means $1.00. 
+This eliminates the possibility of [floating point math errors](https://www.geeksforgeeks.org/rounding-off-errors-java/) 
+in out program.
+
+Like anything in programming, this is a trade-off. 
+Another option would be to use `BigDecimal` but then the data type is a bit harder to work with.
 
 ### User Stories
 
