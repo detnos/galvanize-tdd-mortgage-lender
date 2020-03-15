@@ -44,15 +44,15 @@ Another option would be to use `BigDecimal` but then the data type is a bit hard
     - when I check my available funds
     - then I should see how much funds I currently have
 
-1. As a lender, I want to deny applicants who request higher loan amounts than I have available in my funds so that I don't go bankrupt
-    - Given that an applicant requests a loan,
-    - when the requested amount is greater than the amount of funds I have available
-    - then I should deny them
-
 1. As a lender, I want to be able to add funds so that I have money to offer loans to potential home buyers
     - Given that I am a lender with a means to store funds,
     - when I add funds to my account
     - then I should see my total available funds increase according to how much I added
+
+1. As a lender, I want to deny applicants who request higher loan amounts than I have available in my funds so that I don't go bankrupt
+    - Given that an applicant requests a loan,
+    - when the requested amount is greater than the amount of funds I have available
+    - then I should deny them
 
 1. As a lender, I want to determine whether or not an applicant is a good candidate to offer a loan to so that I can qualify or deny them for a requested loan amount
     - Given that a loanApplicant has a good debt-to-income ratio (debt-to-income < 36%), a credit score above 620, and an amountSaved >= 25% of the requested loanAmount,
