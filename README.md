@@ -54,11 +54,6 @@ Another option would be to use `BigDecimal` but then the data type is a bit hard
     - when the requested amount is greater than the amount of funds I have available
     - then I should deny them
 
-1. As a lender, I want to determine whether or not an applicant is a good candidate to offer a loan to so that I can qualify or deny them for a requested loan amount
-    - Given that a loanApplicant has a good debt-to-income ratio (debt-to-income < 36%), a credit score above 620, and an amountSaved >= 25% of the requested loanAmount,
-    - When they apply for a loan
-    - then I should qualify them
-    
 1. As a lender, I want to calculate a monthly mortgage payment so that I can assess whether or not an applicant is a good candidate to offer a loan to
     - Given that I have an equation to calculate monthly mortgage payments:
         ``` 			
@@ -66,6 +61,11 @@ Another option would be to use `BigDecimal` but then the data type is a bit hard
     - when I am requested of a loan for a given principal amount, monthly interest rate, and # of payments,
     - then I can calculate the minimum monthly mortgage payment for a LoanApplicant
     - Ex. calculating monthly mortgage for a principal amount of 250000, annualRate of .04, numPayments of 360 should return `1193.54`
+    
+1. As a lender, I want to determine whether or not an applicant is a good candidate to offer a loan to so that I can qualify or deny them for a requested loan amount
+    - Given that a loanApplicant has a good debt-to-income ratio (debt-to-income including requested mortgage < 36%), credit score above 620, an amountSaved >= 25% of the requested loanAmount
+    - When they apply for a loan
+    - then I should qualify them
 
 1. As a lender, I want to offer a loan contract to a qualified applicant if I have enough available funds so that they can choose to review and accept a loan from me
     - Given that I have enough available funds to offer a loan,
@@ -97,9 +97,3 @@ Another option would be to use `BigDecimal` but then the data type is a bit hard
     - when the loan contract expires with no response,
     - then I want to reclaim the pending funds back into my available funds
 
-1. As a lender, I want to approve all qualified applicants for a loan as long as I have enough available funds so that I can make more money
-    - Given that an applicant is applying for a home loan,
-    - When they are qualified AND I have enough loanableFunds to loan the amount requested,
-    - Then I should approve them for a loan
-    - For a `new Lender(loanableFunds: 500000, currentLoans: [])`
-    - And the loanApplicant above, `lender.approveLoan(loanApplicant, loanAmount: 250000 )` should return `true`
