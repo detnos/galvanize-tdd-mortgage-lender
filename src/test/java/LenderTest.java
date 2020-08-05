@@ -108,4 +108,13 @@ final class LenderTest {
         //Assert
         assertThat(actual.getMessage()).isEqualTo(expected);
     }
+
+    @Test
+    void denyApplicantsWhoRequestHigherLoanAmountsThanAvailable() {
+        //Setup
+
+        //Exercise
+
+        //Assert
+    }
 }
