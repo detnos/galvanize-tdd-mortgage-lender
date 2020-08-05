@@ -1,3 +1,3 @@
 enum ApplicationStatus {
-    INSUFFICIENT_FUNDS
+    INSUFFICIENT_FUNDS, LOAN_APPROVED
 }

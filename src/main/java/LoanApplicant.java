@@ -4,6 +4,7 @@ final class LoanApplicant {
 	private final int  monthlyDebtLoad;
 	private final int  monthlyGrossIncome;
 	private final long requestedAmount;
+	private ApplicationStatus status;
 
 	LoanApplicant(final int downPayment, final long requestedAmount, final int monthlyGrossIncome, final int monthlyDebtLoad, final int creditScore) {
 		this.downPayment = downPayment;
@@ -32,4 +33,8 @@ final class LoanApplicant {
 	long getRequestedAmount() {
 		return requestedAmount;
 	}
+
+	public ApplicationStatus getStatus() { return status; }
+
+	public void setStatus(ApplicationStatus status) { this.status = status; }
 }

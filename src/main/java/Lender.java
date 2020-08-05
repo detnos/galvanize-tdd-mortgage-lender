@@ -12,4 +12,12 @@ final class Lender {
         }
         this.availableFunds = Math.addExact(this.availableFunds, funds);
     }
+
+    public ApplicationStatus loan(LoanApplicant applicant) {
+        if(this.availableFunds < applicant.getRequestedAmount()) {
+            return ApplicationStatus.INSUFFICIENT_FUNDS;
+        }
+        this.availableFunds = Math.subtractExact(applicant.getRequestedAmount(), this.availableFunds);
+        return ApplicationStatus.LOAN_APPROVED;
+    }
 }
